@@ -70,6 +70,9 @@ opengl detected ... gpu="zink Vulkan 1.4(Adreno (TM) 8xx (MESA_TURNIP))"
 
 ## 已知事项
 
+- 启动器已自动设置 `MESA_VK_WSI_DEBUG=sw`，修复
+  `CreateSwapchainKHR failed` / `zink: could not create swapchain`。
+
 - **MSAA**：`~/.config/BambuStudioInternal/BambuStudio.conf` 中
   `"msaa_type"` 必须是 `"Disabled"`，否则 zink 渲染缩略图可能崩溃。
 - 在线模型/MakerWorld 页面可能被 Cloudflare 拦截，与客户端无关。

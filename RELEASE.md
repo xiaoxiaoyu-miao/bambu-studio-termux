@@ -39,6 +39,13 @@ pkg install ./bambu-studio_02.09.01.70_aarch64.deb
 - `x11-repo`、TUR 仓库
 - 约 1.2 GB 磁盘空间
 
+### 本次修复
+
+- zink 在 termux-x11 下创建 Vulkan swapchain 失败
+  （`VK_ERROR_INITIALIZATION_FAILED` / `could not create swapchain`）：
+  启动器默认设置 `MESA_VK_WSI_DEBUG=sw`，改用软件 WSI 呈现。
+- 已在 Mesa 27.0.0-devel + turnip 上验证。
+
 ### 已知问题
 
 - MSAA 必须设为 `Disabled`（zink 下 X4 可能崩溃）
